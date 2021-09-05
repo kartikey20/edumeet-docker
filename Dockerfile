@@ -29,7 +29,8 @@ ENV NODE_ENV ${NODE_ENV}
 RUN mkdir -p ${BASEDIR}/${EDUMEET}/server/public
 
 ENV REACT_APP_DEBUG=${REACT_APP_DEBUG}
-
+ENV HTTPS=true
+EXPOSE 4443
 # package web app
 RUN yarn run build
 
