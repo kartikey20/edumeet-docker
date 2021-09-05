@@ -30,8 +30,6 @@ ENV NODE_ENV ${NODE_ENV}
 RUN mkdir -p ${BASEDIR}/${EDUMEET}/server/public
 
 ENV REACT_APP_DEBUG=${REACT_APP_DEBUG}
-ENV HTTPS=true
-EXPOSE 4443
 # package web app
 RUN yarn run build
 
@@ -41,7 +39,7 @@ WORKDIR ${BASEDIR}/${EDUMEET}/server
 RUN apt-get install -y git build-essential python
 
 RUN yarn install
-RUN yarn install logstash-client
+RUN yarn add logstash-client
 
 FROM node:10-slim
 
