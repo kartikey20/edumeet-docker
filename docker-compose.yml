@@ -38,8 +38,8 @@ services:
     volumes:
       - ./configs/redis:/usr/local/etc/redis
   ouroboros:
-    container_name: ouroboros
-    hostname: ouroboros
+    container_name: precisely
+    hostname: precisely
     image: pyouroboros/ouroboros
     environment:
       - CLEANUP=true
