@@ -4,7 +4,7 @@ services:
   # edumeet
   edumeet:
     env_file: .env
-    image: karitkey20/working:latest
+    image: karitkey20/edumeet
     depends_on:
       - redis
     build:
